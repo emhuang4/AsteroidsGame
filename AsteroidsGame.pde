@@ -1,14 +1,14 @@
 //your variable declarations here
-Spaceship newShip;
+Spaceship newSpaceShip;
 public void setup() 
 {
 size (500,500);
-newShip= new Spaceship();
+newSpaceShip= new Spaceship();
 
 }
 public void draw() 
 {
-	newShip.show();
+	newSpaceShip.show();
 }
 public void keyPressed()
 {
