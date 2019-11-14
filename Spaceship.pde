@@ -1,7 +1,7 @@
 class Spaceship extends Floater  
 {   
- public Spaceship {
- int corners=4;  //the number of corners, a triangular floater has 3   
+ public Spaceship() {
+ corners=4;  //the number of corners, a triangular floater has 3   
  xCorners= new int[corners];
  yCorners=new int[corners];
  xCorners[0]=-8;
@@ -13,17 +13,25 @@ class Spaceship extends Floater
  xCorners[3]=-2;
  yCorners[3]=0;
 
- int myColor=(0);   
- double myCenterX, myCenterY=250; //holds center coordinates   
- double myDirectionX, myDirectionY=0; //holds x and y coordinates of the vector for direction of travel   
- double myPointDirection=0; //holds current direction the ship is pointing in degrees    
+ myColor=color(255);   
+ myCenterX=myCenterY=250; //holds center coordinates   
+ myDirectionX=myDirectionY=0; //holds x and y coordinates of the vector for direction of travel   
+ myPointDirection=0; //holds current direction the ship is pointing in degrees    
  }
 
-public void setX(int x){myCenterX=x;}
-public void setY(int y){myCenterY=y;}
-public int getX(){return (int)myCenterX;}
-public int getY(){return (int)myCenterY;}
-public void setDirectiox(double x){myDirectionX=x;}
-public double getDirection(){return (double)myDirectionX;}
+public void setX(double x){myCenterX=x;}
+public double getX(){return myCenterX;}
+
+public void setY(double y){myCenterY=y;}
+public double getY(){return myCenterY;}
+
+public void setmyDirectionX(double x){myDirectionX=x;}
+public double getmyDirectionX(){return myDirectionX;}
+
+public void setmyDirectionY(double y){myDirectionY=y;}
+public double getmyDirectionY(){return myDirectionY;}
+
+public void setmyPointDirection(double a){myPointDirection=a;}
+public double getmyPointDirection(){return myPointDirection;}
 
 }
