@@ -20,5 +20,8 @@ public void keyPressed()
 		newSpaceship.setmyDirectionY((double)0);
 		newSpaceship.setmyPointDirection((double)(Math.random()*360));
 	}
+	// if (key=='w'){
+		
+	// }
 }
 
