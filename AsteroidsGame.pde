@@ -19,6 +19,7 @@ public void draw()
   for (int i=0;i<allStars.length;i++){
 	allStars[i].show();
 }
+    
 
 }
 public void keyPressed()
