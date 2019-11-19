@@ -24,10 +24,13 @@ public void draw()
 public void keyPressed()
 {
 	if (keyCode==49){ //hyperspace
-		// newSpaceship.setmyDirectionX((double)0);
-		// newSpaceship.setmyDirectionY((double)0);
-		newSpaceship.setmyDirectionX((double)(Math.random()*500));
-		newSpaceship.setmyDirectionY((double)(Math.random()*500));
+		newSpaceship.setX((double)(Math.random()*500));
+		newSpaceship.setY((double)(Math.random()*500));
+		newSpaceship.setmyDirectionX((double)0);
+		newSpaceship.setmyDirectionY((double)0);
+	}
+	if (keyCode==50){ //accelerate 
+		newSpaceship.accelerate((int)10);
 	}
 	if (keyCode==RIGHT){ //turn right
 		newSpaceship.turn(10);
@@ -36,8 +39,5 @@ public void keyPressed()
 		newSpaceship.turn(-10);
 	}
 
-	if (keyCode==50){ //accelerate 
-		newSpaceship.accelerate((int)10);
-	}
 }
 
