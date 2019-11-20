@@ -1,26 +1,34 @@
 //your variable declarations here
 Spaceship newSpaceship;
 Star [] allStars;
+Asteroid [] allAsteroids;
 public void setup() 
 {
-size (500,500);
-newSpaceship= new Spaceship();
-allStars= new Star[200];
-for (int i=0;i<allStars.length;i++){
-	allStars[i]= new Star();
-}
-
+	size (500,500);
+	newSpaceship= new Spaceship();
+	allStars= new Star[350];
+	for (int i=0;i<allStars.length;i++){
+		allStars[i]= new Star();
+	}
+	allAsteroids=new Asteroid [2];
+	for (int i=0;i<allAsteroids.length;i++){
+		allAsteroids[i]= new Asteroid();
+	}
 }
 public void draw() 
 {
 	background(0);
 	newSpaceship.show();
     newSpaceship.move();
-  for (int i=0;i<allStars.length;i++){
-	allStars[i].show();
-}
+  	for (int i=0;i<allStars.length;i++){
+		allStars[i].show();
+	}
+	for (int i=0;i<allAsteroids.length;i++){
+		stroke(255);
+		noFill();
+  		allAsteroids[i].show();
+	}
     
-
 }
 public void keyPressed()
 {
