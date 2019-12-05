@@ -5,12 +5,14 @@ Asteroid [] allAsteroids;
 public void setup() 
 {
 	size (500,500);
+
 	newSpaceship= new Spaceship();
+
 	allStars= new Star[350];
 	for (int i=0;i<allStars.length;i++){
 		allStars[i]= new Star();
 	}
-	allAsteroids=new Asteroid [2];
+	allAsteroids=new Asteroid [10];
 	for (int i=0;i<allAsteroids.length;i++){
 		allAsteroids[i]= new Asteroid();
 	}
@@ -18,17 +20,18 @@ public void setup()
 public void draw() 
 {
 	background(0);
-	newSpaceship.show();
-    newSpaceship.move();
+
   	for (int i=0;i<allStars.length;i++){
 		allStars[i].show();
 	}
+
+	newSpaceship.show();
+    newSpaceship.move();
+
 	for (int i=0;i<allAsteroids.length;i++){
-		stroke(255);
-		noFill();
   		allAsteroids[i].show();
+  		allAsteroids[i].move();
 	}
-    
 }
 public void keyPressed()
 {
