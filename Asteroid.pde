@@ -24,6 +24,11 @@ class Asteroid extends Floater{
 		myDirectionX=(Math.random()*2);
 		myDirectionY=(Math.random()*2);
 		myPointDirection=(Math.random()*360);
+
+		for (int i=0;i<allAsteroids.length();i++){
+		ArrayList <Integer> theList= new ArrayList <Integer> ();
+			theList.add(allAsteroids);
+		}
 	}
 	public void setrotSpeed (int x){rotSpeed=x;};
 	public double getrotSpeed() {return rotSpeed;}
