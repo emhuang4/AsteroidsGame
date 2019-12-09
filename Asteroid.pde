@@ -25,13 +25,28 @@ class Asteroid extends Floater{
 		myDirectionY=(Math.random()*2);
 		myPointDirection=(Math.random()*360);
 
-		for (int i=0;i<allAsteroids.length();i++){
-		ArrayList <Integer> theList= new ArrayList <Integer> ();
-			theList.add(allAsteroids);
-		}
+		// for (int i=0;i<allAsteroids.length();i++){
+		// ArrayList <Integer> theList= new ArrayList <Integer> ();
+		// 	theList.add(allAsteroids);
+		// }
 	}
 	public void setrotSpeed (int x){rotSpeed=x;};
 	public double getrotSpeed() {return rotSpeed;}
+
+public void setmyCenterX(double x){myCenterX=x;}
+public double getmyCenterX(){return myCenterX;}
+
+public void setmyCenterY(double y){myCenterY=y;}
+public double getmyCenterY(){return myCenterY;}
+
+public void setmyDirectionX(double x){myDirectionX=x;}
+public double getmyDirectionX(){return myDirectionX;}
+
+public void setmyDirectionY(double y){myDirectionY=y;}
+public double getmyDirectionY(){return myDirectionY;}
+
+public void setmyPointDirection(double a){myPointDirection=a;}
+public double getmyPointDirection(){return myPointDirection;}
 
 	public void move(){
 		turn (rotSpeed);
@@ -41,7 +56,7 @@ class Asteroid extends Floater{
 	public void show ()  //Draws the floater at the current position 
 	{             
     noFill();   
-    stroke(255,150);   
+    stroke(255,200);  
    //translate the (x,y) center of the ship to the correct position
     translate((float)myCenterX, (float)myCenterY);
 

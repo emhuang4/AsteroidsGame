@@ -1,7 +1,7 @@
 //your variable declarations here
 Spaceship newSpaceship;
 Star [] allStars;
-ArrayList <Asteroid> rock = new <Asteroid> ();
+ArrayList <Asteroid> rock = new ArrayList <Asteroid> ();
 public void setup() 
 {
 	size (500,500);
@@ -31,8 +31,8 @@ public void draw()
 	for (int i=0;i<rock.size();i++){
   		rock.get(i).show();
   		rock.get(i).move();
-  		if (dist((float)(rock.get(i).x),(float)(rock.get(i).y),(float)(newSpaceship.x),(float)(newSpaceship.y))<10){
-  			asteroid.remove();
+  		if (dist((float)(rock.get(i).myCenterX),(float)(rock.get(i).myCenterY),(float)(newSpaceship.myCenterX),(float)(newSpaceship.myCenterY))<10){
+  			rock.remove(i);
   		}
 	}
 }
@@ -45,7 +45,7 @@ public void keyPressed()
 		newSpaceship.setmyDirectionY((double)0);
 	}
 	if (keyCode==50){ //accelerate 
-		newSpaceship.accelerate((int)10);
+		newSpaceship.accelerate((int)5);
 	}
 	if (keyCode==RIGHT){ //turn right
 		newSpaceship.turn(10);
