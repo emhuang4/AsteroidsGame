@@ -31,7 +31,7 @@ public void draw()
 	for (int i=0;i<rock.size();i++){
   		rock.get(i).show();
   		rock.get(i).move();
-  		if (dist((float)(rock.get(i).myCenterX),(float)(rock.get(i).myCenterY),(float)(newSpaceship.myCenterX),(float)(newSpaceship.myCenterY))<10){
+  		if (dist((float)(rock.get(i).myCenterX),(float)(rock.get(i).myCenterY),(float)(newSpaceship.myCenterX),(float)(newSpaceship.myCenterY))<20){
   			rock.remove(i);
   		}
 	}
