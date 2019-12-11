@@ -33,20 +33,19 @@ class Asteroid extends Floater{
 	public void setrotSpeed (int x){rotSpeed=x;};
 	public double getrotSpeed() {return rotSpeed;}
 
-public void setmyCenterX(double x){myCenterX=x;}
-public double getmyCenterX(){return myCenterX;}
+	public void setmyCenterX(double x){myCenterX=x;}
+	public double getmyCenterX(){return myCenterX;}
 
-public void setmyCenterY(double y){myCenterY=y;}
-public double getmyCenterY(){return myCenterY;}
+	public void setmyCenterY(double y){myCenterY=y;}
+	public double getmyCenterY(){return myCenterY;}
 
-public void setmyDirectionX(double x){myDirectionX=x;}
-public double getmyDirectionX(){return myDirectionX;}
+	public double getmyDirectionX(){return myDirectionX;}
 
-public void setmyDirectionY(double y){myDirectionY=y;}
-public double getmyDirectionY(){return myDirectionY;}
+	public void setmyDirectionY(double y){myDirectionY=y;}
+	public double getmyDirectionY(){return myDirectionY;}
 
-public void setmyPointDirection(double a){myPointDirection=a;}
-public double getmyPointDirection(){return myPointDirection;}
+	public void setmyPointDirection(double a){myPointDirection=a;}
+	public double getmyPointDirection(){return myPointDirection;}
 
 	public void move(){
 		turn (rotSpeed);

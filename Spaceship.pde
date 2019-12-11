@@ -1,5 +1,6 @@
 class Spaceship extends Floater  
 {   
+	int speed;
  public Spaceship() {
  corners=4;  //the number of corners, a triangular floater has 3   
  xCorners= new int[corners];
@@ -19,11 +20,11 @@ class Spaceship extends Floater
  myPointDirection=0; //holds current direction the ship is pointing in degrees    
  }
 
-public void setX(double x){myCenterX=x;}
-public double getX(){return myCenterX;}
+public void setmyCenterX(double x){myCenterX=x;}
+public double getmyCenterX(){return myCenterX;}
 
-public void setY(double y){myCenterY=y;}
-public double getY(){return myCenterY;}
+public void setmyCenterY(double y){myCenterY=y;}
+public double getmyCenterY(){return myCenterY;}
 
 public void setmyDirectionX(double x){myDirectionX=x;}
 public double getmyDirectionX(){return myDirectionX;}
@@ -34,4 +35,12 @@ public double getmyDirectionY(){return myDirectionY;}
 public void setmyPointDirection(double a){myPointDirection=a;}
 public double getmyPointDirection(){return myPointDirection;}
 
+public void setSpeed(int s){speed=s;}
+public int getSpeed(){return speed;}
+	
+	public void accelerate (double dAmount){
+		speed+=dAmount;
+		super.accelerate(dAmount);
+	}
+ 
 }
