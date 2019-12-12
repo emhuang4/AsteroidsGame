@@ -19,7 +19,7 @@ public void setup()
 	}
 
 	for (int iii=0;iii<15;iii++){
-		bull.add (new Bullet());
+		bull.add (new Bullet(newSpaceship));
 	}
 }
 public void draw() 
@@ -41,14 +41,17 @@ public void draw()
   		}
 	}
 
-	for (int iii=0;iii<bull.size();i++){
-    	bull.move();
-    	bull.show();
-    	for (int iii=0;iii<rock.size();i++)
-    		if (dist((float)(bull.get(iii).myCenterX),(float)(bull.get(iii).myCenterY),(float)(rock.get(iii).myCenterX),(float)(rock.get(iii).myCenterY))<10){
-				rock.remove(iii);
-				bull.remove(iii);
-		}
+	for (int iii=0;iii<bull.size();iii++){
+    	bull.get(iii).move();
+    	bull.get(iii).show();
+    	// if (bull.get(iii).myCenterX>500 || bull.get(iii).myCenterY>500){
+    	// 	bull.remove(iii);
+    	for (int ii=0;ii<rock.size();ii++){
+    		if (dist((float)(bull.get(ii).myCenterX),(float)(bull.get(ii).myCenterY),(float)(rock.get(ii).myCenterX),(float)(rock.get(ii).myCenterY))<10){
+				bull.remove(ii);
+				rock.remove(ii);
+			}
+    	}
 	}
 
 }
@@ -69,6 +72,14 @@ public void keyPressed()
 	if (keyCode==LEFT){ //turn left
 		newSpaceship.turn(-10);
 	}
-
+	// if (keyCode==32){
+	// 	bull.add (new Bullet(newSpaceship));
+	// 	for (int ii=0;ii<rock.size();ii++){
+ //    		if (dist((float)(bull.get(ii).myCenterX),(float)(bull.get(ii).myCenterY),(float)(rock.get(ii).myCenterX),(float)(rock.get(ii).myCenterY))<10){
+	// 			rock.remove(ii);
+	// 			bull.remove(ii);
+	// 		}
+	// 	}
+	// }
 }
 
