@@ -18,9 +18,6 @@ public void setup()
 		rock.add (new Asteroid());
 	}
 
-	for (int iii=0;iii<15;iii++){
-		bull.add (new Bullet(newSpaceship));
-	}
 }
 public void draw() 
 {
@@ -43,10 +40,17 @@ public void draw()
 
 	for (int iii=0;iii<bull.size();iii++){
     	bull.get(iii).move();
+    	if (bull.get(iii).getGone()){
+    		bull.remove(iii);
+    		iii--; //goes back one index (against i++)
+    		continue; // stops here and goes back up to continue loop
+    	}
     	bull.get(iii).show();
-    }
-    	// if (bull.get(iii).myCenterX>500 || bull.get(iii).myCenterY>500){
+
+    	// if (bull.get(iii).myCenterX>500 && bull.get(iii).myCenterY>500){
     	// 	bull.remove(iii);
+    	// }
+    }
     for (int ii=0;ii<rock.size();ii++){
     	for (int iv=0;iv<bull.size();iv++)
     		if (dist((float)(bull.get(iv).myCenterX),(float)(bull.get(iv).myCenterY),(float)(rock.get(ii).myCenterX),(float)(rock.get(ii).myCenterY))<10){
